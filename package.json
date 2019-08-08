@@ -4,7 +4,7 @@
   "description": "This module create a watcher that delete the require cache file of any updated file.",
   "main": "watcher.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "node watcher.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/leireNN/pit-require-cache/issues"
   },
-  "homepage": "https://github.com/leireNN/pit-require-cache#readme"
+  "homepage": "https://github.com/leireNN/pit-require-cache#readme",
+  "dependencies": {
+    "chokidar": "^3.0.2"
+  }
 }
