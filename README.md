@@ -10,11 +10,11 @@
 
 **pit-require-cache** is a zero-configuration watcher that deletes `require's` cache for any updated file.
 
-## Case of use 🖌
+## Use case 🖌
 Lets say that you are importing trought require a specific file and then serving that file trought a express server, then you update that file and as `require` cache the files already imported you need to stop the server and start it again. 
 With `pit-require-cache` is not needed anymore, just instantiate the watcher once and then it will delete the cache for you making the changes appear all straight.
 
-## Instalation 🧱
+## Installation 🧱
 
 `npm install pit-require-cache`
 
