@@ -1,0 +1,24 @@
+{
+  "name": "pit-require-cache",
+  "version": "1.0.0",
+  "description": "This module create a watcher that delete the require cache file of any updated file.",
+  "main": "watcher.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leireNN/pit-require-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "require",
+    "watcher"
+  ],
+  "author": "Leire Polo Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leireNN/pit-require-cache/issues"
+  },
+  "homepage": "https://github.com/leireNN/pit-require-cache#readme"
+}
