@@ -53,39 +53,44 @@ const options = {
   atomic: true
 }
 
-watcher(options)
+watcher({directory: 'myFolderName', ...options})
 ```
 
 ### Main options:
 ```js
+{
   directory        Directory to be watched           [default: ".", string or array of strings]
 
-  persistent       Show version number               [default: true, boolean]
+  options: {       Options object                    [default: {}, object]
 
-  ignored          Ignored files                     [default: '', string, example: '*.txt']
+    persistent       Show version number               [default: true, boolean]
 
-  ignoreInitial    Add/addDir events are also        [default: false, boolean]
-                   emitted while instantiating
+    ignored          Ignored files                     [default: '', string, example: '*.txt']
 
-  followSymlinks   Watch followinf symbolic links    [default: true, boolean]
+    ignoreInitial    Add/addDir events are also        [default: false, boolean]
+                    emitted while instantiating
 
-  cwd              Base directory                    [default: '.', string]
+    followSymlinks   Watch followinf symbolic links    [default: true, boolean]
 
-  usePolling       Whether to use fs.watchFile or    [default: false, boolean]
-                   fs.watchtrue
+    cwd              Base directory                    [default: '.', string]
 
-  interval         Interval for polling              [default: 100, number]
+    usePolling       Whether to use fs.watchFile or    [default: false, boolean]
+                    fs.watchtrue
 
-  binaryInterval   Interval polling for binary files.[default: 300, number]
+    interval         Interval for polling              [default: 100, number]
 
-  depth            Limits how many levels of 
-                   subdirectories will be traversed. [default: undefined, number]
+    binaryInterval   Interval polling for binary files.[default: 300, number]
 
-  awaitWriteFinish Wait until the size of the file   [default: undefined, example: {
-                   stays constant.                      stabilityThreshold: 2000,
-                                                        pollInterval: 100
-                                                      }, object]
-  ignorePermissionErrors Silence the access errors   [default: false, boolean]
+    depth            Limits how many levels of 
+                    subdirectories will be traversed. [default: undefined, number]
+
+    awaitWriteFinish Wait until the size of the file   [default: undefined, example: {
+                    stays constant.                      stabilityThreshold: 2000,
+                                                          pollInterval: 100
+                                                        }, object]
+    ignorePermissionErrors Silence the access errors   [default: false, boolean]
+  }
+}
 ```
 As we are using `chokidar` module for the watcher implementation, there are a couple more options that can be checked on `chokidar`'s module docs https://www.npmjs.com/package/chokidar/v/2.0.4
 
